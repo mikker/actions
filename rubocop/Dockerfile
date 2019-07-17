@@ -5,17 +5,17 @@ LABEL "com.github.actions.description"="Provides linting and fixes using rubocop
 LABEL "com.github.actions.icon"="user-check"
 LABEL "com.github.actions.color"="purple"
 
-LABEL "repository"="http://github.com/bltavares/actions"
-LABEL "homepage"="http://github.com/bltavares/actions"
-LABEL "maintainer"="Bruno Tavares <connect+githubactions@bltavares.com>"
+LABEL "repository"="http://github.com/mikker/actions"
+LABEL "homepage"="http://github.com/mikker/actions"
+LABEL "maintainer"="Mikkel Malmberg <mikkel@brnbw.com>"
 
 RUN apt-get update -qq && apt-get install -qqy --no-install-recommends \
-  curl=7.52* \
-  jq=1.5* \
-  bash=4.4* \
-  git=1:2.11* \
-  make=4.1* \
-  gcc=4:6.3* \
+  curl \
+  jq \
+  bash \
+  git \
+  make \
+  gcc \
   && rm -rf /var/lib/apt/lists/*
 
 RUN gem install rubocop
