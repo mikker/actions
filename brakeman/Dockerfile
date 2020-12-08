@@ -18,7 +18,7 @@ RUN apt-get update -qq && apt-get install -qqy --no-install-recommends \
   gcc \
   && rm -rf /var/lib/apt/lists/*
 
-RUN gem install brakeman pandoc-ruby
+RUN gem install brakeman pandoc pandoc-ruby
 
 COPY lib.sh /lib.sh
 COPY entrypoint.sh /entrypoint.sh
